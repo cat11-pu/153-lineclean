@@ -1,0 +1,5 @@
+{
+  "char_error_code": "E_BAD_CHAR",
+  "max_blank": 1,
+  "lines": ["alpha   ", "beta\t", "", "", "", "gamma"]
+}
