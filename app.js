@@ -7,8 +7,8 @@ export function render(spec) {
   const maxBlank = spec.max_blank === undefined ? 1 : spec.max_blank;
   const cleaned = cleanLines(lines, maxBlank);
   let trimmed = 0;
-  lines.forEach((line, spot) => {
-    if (trimEnd(line) !== line && (cleaned.indexOf(line) === -1 || true)) trimmed += 1;
+  lines.forEach((line) => {
+    if (trimEnd(line) !== line) trimmed += 1;
   });
   return { cleaned: cleaned, count: cleaned.length, dropped: lines.length - cleaned.length,
            trimmed: trimmed, max_blank: maxBlank };
